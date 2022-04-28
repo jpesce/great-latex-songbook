@@ -1,0 +1,61 @@
+\documentclass{book}
+\usepackage[a4paper,
+  top=2cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry}
+\usepackage{fontspec}
+\setmainfont{Untitled Sans}
+%\setmainfont{ETBembo}
+\setmonofont{Input Mono}
+
+\usepackage[fontsize=12pt]{fontsize}
+\pagenumbering{gobble} % No page number
+\usepackage{sectsty,fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Joandra's Songbook}
+\renewcommand{\headrulewidth}{1.0pt}
+\renewcommand{\footrulewidth}{1.0pt}
+\rfoot{\rightmark}
+\lfoot{\leftmark}
+
+\usepackage{leadsheets}
+\usepackage{guitarchordschemes}
+\usepackage{musixtex,graphicx}
+
+\definesongtitletemplate{custom}{
+  \section*{ \songproperty{title} }%
+  \markboth{ \songproperty{title} }{ \songproperty{band} }%
+}
+
+\setleadsheets{
+  title-template = custom,
+  intro/label-format = \scriptsize,
+  verse/label-format=\scriptsize,
+  verse/numbered=true,
+  chords/format = \small\bf\ttfamily,
+  chorus/label-format = \scriptsize,
+  interlude/label-format = \scriptsize,
+  bridge/label-format = \scriptsize
+}
+
+\input{src/instruments-available.tex}
+\input{src/current-instrument.tex}
+
+% Chord definitions
+\ifx\instrument\ukulele
+\input{src/chords/chords-ukulele.tex}
+\fi
+
+\usepackage{pdfpages}
+
+\begin{document}
+\includepdf[pages=-]{src/cover.pdf}
+\input{src/songs.tex}
+\end{document}

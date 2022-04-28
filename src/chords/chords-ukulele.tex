@@ -1,0 +1,26 @@
+\setchordscheme{
+  name-format = \footnotesize\ttfamily,
+  name-distance = 0,
+  strings = 4,
+  chord-frets = 5,
+  tuning = {,,,},
+  rotate = -90,
+  x-unit = 1.75mm , y-unit = 2.75mm,
+  finger-radius = .4,
+  line-width = .6pt,
+  restrict-bounding-box
+}
+
+\newcommand\achord{ \chordscheme[ name = \writechord{A}, ring = {2, 1}, finger = {2/4, 1/3} ] }
+\newcommand\aminorchord{ \chordscheme[ name = Am, ring = {3, 2, 1}, finger = {2/4} ] }
+\newcommand\aminorVIIchord{ \chordscheme[ name = Am7, ring = {4,3,2,1} ] }
+\newcommand\bflatchord{ \chordscheme[ name = Bb, finger = {3/4, 2/3, 1/2, 1/1} ] }
+\newcommand\cchord{ \chordscheme[ name = C, ring = {4,3,2}, finger = {3/1} ] }
+\newcommand\cbbasschord{ \chordscheme[ name = C/B, ring = {4,3,2}, finger = {2/1} ] }
+\newcommand\dchord{ \chordscheme[ name = D, ring = {1}, finger = {2/4, 2/3, 2/2} ] }
+\newcommand\dVIIchord{ \chordscheme[ name = \writechord{D7}, ring = {1, 3}, finger = {2/4, 2/2} ] }
+\newcommand\dminorchord{ \chordscheme[ name = Dm, ring = {1}, finger = {2/4, 2/3, 1/2} ] }
+\newcommand\eminorchord{ \chordscheme[ name = \writechord{Em}, ring = {4}, finger = {4/3,3/2,2/1} ] }
+\newcommand\gchord{ \chordscheme[ name = G, ring = {4}, finger = {2/3,3/2,2/1} ] }
+\newcommand\gmajorVIIchord{ \chordscheme[ name = \writechord{Gmaj7}, ring = {4}, finger = {2/3,2/2,2/1} ] }
+\newcommand\gminorchord{ \chordscheme[ name = Gm, ring = {4}, finger = {2/3, 3/2, 1/1} ] }
