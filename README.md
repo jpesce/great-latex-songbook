@@ -12,7 +12,7 @@
 </p>
 
 The Great LaTeX Songbook is a template for generating songbooks in a modern layout with support for lyrics, chords, chord diagrams and tablatures. It features:
-* **Multiple instruments**: compile multiple songbooks, one for each instrument. Define which parts of the song will show up for every instrument (_e.g._ lyrics and chords) and which parts will show up for individual instruments (_e.g._ a solo).
+* **Multiple instruments**: compile multiple songbooks, one for each instrument. Define which parts of the song will show up for all instruments (_e.g._ lyrics and chords) and which parts will show up for individual instruments (_e.g._ a solo).
 * **Lyrics and chords**: lyrics with section and chord changes via `leadsheets`
 * **Chord diagrams**: chord diagrams via `guitarchordschemes`
 * **Tablature and sheet music**: tablature and sheet music excerpts via `musixtex`
