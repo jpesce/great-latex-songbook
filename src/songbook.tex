@@ -9,9 +9,10 @@
   heightrounded, % to avoid spurious underfull messages
 ]{geometry}
 \usepackage{fontspec}
-\setmainfont{Untitled Sans}
-%\setmainfont{ETBembo}
-\setmonofont{Input Mono}
+
+% Use custom fonts
+%\setmainfont{Untitled Sans}
+%\setmonofont{Input Mono}
 
 \usepackage[fontsize=12pt]{fontsize}
 \pagenumbering{gobble} % No page number
@@ -19,7 +20,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Joandra's Songbook}
+\lhead{The Great LaTeX Songbook} % Songbook name
 \renewcommand{\headrulewidth}{1.0pt}
 \renewcommand{\footrulewidth}{1.0pt}
 \rfoot{\rightmark}
@@ -37,7 +38,7 @@
 \setleadsheets{
   title-template = custom,
   intro/label-format = \scriptsize,
-  verse/label-format=\scriptsize,
+  verse/label-format= \scriptsize,
   verse/numbered=true,
   chords/format = \small\bf\ttfamily,
   chorus/label-format = \scriptsize,
@@ -47,11 +48,7 @@
 
 \input{src/instruments-available.tex}
 \input{src/current-instrument.tex}
-
-% Chord definitions
-\ifx\instrument\ukulele
 \input{src/chords/chords-ukulele.tex}
-\fi
 
 \usepackage{pdfpages}
 
